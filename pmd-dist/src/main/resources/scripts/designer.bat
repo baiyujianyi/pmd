@@ -37,12 +37,12 @@ if %_needjfxlib% EQU 1 (
         pause
         exit
     )
-    if [%JAVAFX_HOME%] EQU [] (
+    if ["%JAVAFX_HOME%"] EQU [] (
         echo The environment variable JAVAFX_HOME is missing.
         pause
         exit
     )
-    set classpath=%TOPDIR%\lib\*;%JAVAFX_HOME%\lib\*
+    set classpath=%TOPDIR%\lib\*;"%JAVAFX_HOME%"\lib\*
 ) else (
     set classpath=%TOPDIR%\lib\*
 )
